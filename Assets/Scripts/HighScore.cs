@@ -13,7 +13,7 @@ public class HighScore : MonoBehaviour
     public int TopScore;
 
     // private variables
-    private bool debugSwitch = true;
+    private bool debugSwitch = false;
 
     public void Awake()
     {
