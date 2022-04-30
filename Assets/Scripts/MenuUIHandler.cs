@@ -13,6 +13,10 @@ using UnityEditor;
 [DefaultExecutionOrder(1000)]
 public class MenuUIHandler : MonoBehaviour
 {
+    private void Awake()
+    {
+        GameObject.Find("InputField").GetComponent<TMP_InputField>().text = PlayerName.Instance.UserName;
+    }
 
     public void StartNew()
     {

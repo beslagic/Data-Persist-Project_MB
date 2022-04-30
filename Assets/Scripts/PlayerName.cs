@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using System.IO;
 
 public class PlayerName : MonoBehaviour
@@ -23,9 +24,13 @@ public class PlayerName : MonoBehaviour
         // Create new sInstance
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        //LoadPlayerName();
     }
-    public string getName() 
+    public void LoadPlayerName() 
     {
-        return UserName;
+        if (PlayerName.Instance.UserName != "")
+        GameObject.Find("InputField").GetComponent<TMP_InputField>().text = PlayerName.Instance.UserName; 
+           
+        
     }
 }
